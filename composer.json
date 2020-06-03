@@ -1,0 +1,12 @@
+{
+    "name": "helium/spreadsheet-manager",
+    "description": "Service that handles csv/xls imports and exports",
+    "type": "composer-plugin",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Helium\\SpreadsheetManager\\": "src",
+            "Helium\\SpreadsheetManager\\": "tests"
+        }
+    }
+}
