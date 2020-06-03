@@ -1,7 +1,13 @@
 {
     "name": "helium/spreadsheet-manager",
     "description": "Service that handles csv/xls imports and exports",
-    "type": "composer-plugin",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Kim",
+            "email": "david@heliumservices.com"
+        }
+    ],
     "require": {},
     "autoload": {
         "psr-4": {
