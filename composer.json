@@ -8,11 +8,13 @@
             "email": "david@heliumservices.com"
         }
     ],
-    "require": {},
+    "require": {
+        "orchestra/testbench": "^5.3"
+    },
     "autoload": {
         "psr-4": {
             "Helium\\SpreadsheetManager\\": "src",
-            "Helium\\SpreadsheetManager\\": "tests"
+            "Helium\\SpreadsheetManager\\Tests": "tests"
         }
     }
 }
