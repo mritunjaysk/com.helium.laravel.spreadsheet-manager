@@ -3,10 +3,12 @@
 namespace Helium\SpreadsheetManager\Classes;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Csv;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Maker
 {
-    private function makeSheet(array $header = [], array $data = [], ?string $nameExt, string $format) : string
+    private static function makeSheet(array $header = [], array $data = [], ?string $nameExt, string $format) : string
     {
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -53,13 +55,13 @@ class Maker
         return $tempFile;
     }
 
-    public function makeXls(array $header = [], array $data = [], ?string $nameExt) : string
+    public static function makeXls(array $header = [], array $data = [], ?string $nameExt) : string
     {
-        return $this->makeSheet($header, $data, $nameExt, 'xls');
+        return self::makeSheet($header, $data, $nameExt, 'xls');
     }
 
-    public function makeCsv(array $header = [], array $data = [], ?string $nameExt) : string
+    public static function makeCsv(array $header = [], array $data = [], ?string $nameExt) : string
     {
-        return $this->makeSheet($header, $data, $nameExt, 'csv');
+        return self::makeSheet($header, $data, $nameExt, 'csv');
     }
 }
