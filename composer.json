@@ -9,12 +9,13 @@
         }
     ],
     "require": {
-        "orchestra/testbench": "^5.3"
+        "orchestra/testbench": "^5.3",
+        "phpoffice/phpspreadsheet": "^1.13"
     },
     "autoload": {
         "psr-4": {
             "Helium\\SpreadsheetManager\\": "src",
-            "Helium\\SpreadsheetManager\\Tests": "tests"
+            "Helium\\SpreadsheetManager\\Tests\\": "tests"
         }
     }
 }
