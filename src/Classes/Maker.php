@@ -6,7 +6,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
 class Maker
 {
-    private function makeSheet(array $header = [], array $data = [], ?string $nameExt, string $format)
+    private function makeSheet(array $header = [], array $data = [], ?string $nameExt, string $format) : string
     {
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -53,11 +53,13 @@ class Maker
         return $tempFile;
     }
 
-    public function makeXls(array $header = [], array $data = [], ?string $nameExt){
+    public function makeXls(array $header = [], array $data = [], ?string $nameExt) : string
+    {
         return $this->makeSheet($header, $data, $nameExt, 'xls');
     }
 
-    public function makeCsv(array $header = [], array $data = [], ?string $nameExt){
+    public function makeCsv(array $header = [], array $data = [], ?string $nameExt) : string
+    {
         return $this->makeSheet($header, $data, $nameExt, 'csv');
     }
 }
