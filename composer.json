@@ -2,6 +2,7 @@
     "name": "helium/spreadsheet-manager",
     "description": "Service that handles csv/xls imports and exports",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "David Kim",
