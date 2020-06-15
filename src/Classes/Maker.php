@@ -16,6 +16,7 @@ class Maker
         $startingRow = 0;
 
         //If there is a header, offset the row by 1
+        //Increment column indexes by integer
         if($header && is_array($header)){
             $columnNumber = 1;
             foreach($header as $key => $value){
