@@ -17,23 +17,19 @@ class Maker
 
         //If there is a header, offset the row by 1
         if($header && is_array($header)){
-            $columnLetter = 'A';
-
+            $columnNumber = 1;
             foreach($header as $key => $value){
-                $sheet->setCellValue($columnLetter . '1', $value);
-                $columnLetter = chr(ord($columnLetter) + 1);
+                $sheet->setCellValueByColumnAndRow($columnNumber, 1,  $value);
+                $columnNumber++;
             }
-
             $startingRow = 1;
         }
 
         foreach($data as $row  => $rowData){
-
-            $columnLetter = 'A';
+            $columnNumber = 1;
             foreach($rowData as $column => $value) {
-
-                $sheet->setCellValue($columnLetter . ($row + $startingRow + 1), $value);
-                $columnLetter = chr(ord($columnLetter) + 1);
+                $sheet->setCellValueByColumnAndRow($columnNumber, ($row + $startingRow + 1), $value);
+                $columnNumber++;
             }
 
         }
