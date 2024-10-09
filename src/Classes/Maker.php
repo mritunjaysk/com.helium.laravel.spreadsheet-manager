@@ -20,7 +20,7 @@ class Maker
         if($header && is_array($header)){
             $columnNumber = 1;
             foreach($header as $key => $value){
-                $sheet->setCellValueByColumnAndRow($columnNumber, 1,  $value);
+                $sheet->setCellValue([$columnNumber, 1],  $value);
                 $columnNumber++;
             }
             $startingRow = 1;
@@ -29,7 +29,7 @@ class Maker
         foreach($data as $row  => $rowData){
             $columnNumber = 1;
             foreach($rowData as $column => $value) {
-                $sheet->setCellValueByColumnAndRow($columnNumber, ($row + $startingRow + 1), $value);
+                $sheet->setCellValue([$columnNumber, ($row + $startingRow + 1)], $value);
                 $columnNumber++;
             }
 
